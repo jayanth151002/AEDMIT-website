@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+.fa{
+  padding:3px 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ml-auto{
+  margin-left: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.mainfirst{
+  margin-top:30px;
+}
+
+.imgf{
+  margin:auto;
+}
+
+.btn-counsel{
+  margin:20px;
+  padding:10px;
+}
+
+
+
+@media only screen and (min-width: 1176px){
+    .head{
+      padding-top:50px;
+    }
+
+
+    .subhead{
+      margin-top:30px;
+    }
+
+    .btn-counsel{
+      margin:50px;
+    }
+
+    .secondmain{
+      margin-top: 20px;
+    }
+
+    .maincard{
+      margin-top: 70px;
+      margin-bottom: 70px;
+    }
+}
+
+.mcarditems{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1176px){
+  .head{
+    padding-top:30px;
+  }
+  .subhead{
+    margin-top:20px;
+  }
+
+  .maincard{
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media only screen and (min-width: 768px) and (max-width: 992px){
+  .mainimg{
+    width:100%;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+
+@media only screen and (max-width: 768px){
+  .subhead{
+    margin-top:30px;
+    margin-bottom:20px;
+  }
+
+  .maincard{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .sbodyitem{
+    margin-bottom:20px;
+  }
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h5{
+  margin:5px;
+}
+
+.footer{
+  background-color: rgb(168, 164, 164);
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
