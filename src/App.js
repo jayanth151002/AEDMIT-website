@@ -1,21 +1,21 @@
 import React, { Component } from "react";
+import { BrowserRouter } from 'react-router-dom';
 import Main from "./components/MainComponent";
-import Header from "./components/HeaderComponent";
-import Footer from "./components/FooterComponent";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import './script'
 import 'font-awesome/css/font-awesome.css';
-//import 'bootstrap-social/bootstrap-social.css';
+import '@brainhubeu/react-carousel/lib/style.css';
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header />
-        <Main />
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Main />
+        </div>
+      </BrowserRouter>
     );
   }
 }

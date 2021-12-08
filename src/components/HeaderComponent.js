@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron, Button, NavLink, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input } from 'reactstrap'
+import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input } from 'reactstrap'
+import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
     constructor(props) {
@@ -38,12 +39,12 @@ class Header extends Component {
     render() {
         return (
             <div>
-                <Navbar color="danger" dark expand="md" light container>
+                <Navbar color="danger" dark expand="lg" light container className="fixed-top">
                     <NavbarToggler onClick={this.toggleNav} />
-                    <NavbarBrand classname="mr-auto" href="/">
-                        Trial App
+                    <NavbarBrand classname="mr-auto navtitle" href="/">
+                        AEDMIT
                     </NavbarBrand>
-                    <Nav className="ml-auto d-block d-md-none" navbar>
+                    <Nav className="ml-auto d-block d-lg-none" navbar>
                         <NavItem>
                             <Button color="secondary" dark onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
                         </NavItem>
@@ -56,30 +57,40 @@ class Header extends Component {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to="/aboutus">
-                                    <span className="fa fa-info fa-lg"></span>About Us
+                                <NavLink className="nav-link" to="/country/:name">
+                                    <span className="fa fa-info fa-lg"></span>Country
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to="/menu">
-                                    <span className="fa fa-list fa-lg"></span>Menu
+                                <NavLink className="nav-link" to="/experts">
+                                    <span className="fa fa-list fa-lg"></span>Experts
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to="/contactus">
-                                    <span className="fa fa-address-card fa-lg"></span>Contact Us
+                                <NavLink className="nav-link" to="/about">
+                                    <span className="fa fa-address-card fa-lg"></span>About
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink className="nav-link" to="/portal">
+                                    <span className="fa fa-address-card fa-lg"></span>Student Portal
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink className="nav-link" to="/faqs">
+                                    <span className="fa fa-address-card fa-lg"></span>FAQs
                                 </NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>
-                    <Nav className="ml-auto d-none d-md-block" navbar>
+                    <Nav className="ml-auto d-none d-lg-block" navbar>
                         <NavItem>
                             <Button color="secondary" dark onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
                         </NavItem>
                     </Nav>
                 </Navbar>
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                    <ModalHeader>
+                    <ModalHeader close={<Button color="secondary" outline className="close" onClick={this.toggleModal}><large>X</large></Button>} toggle={this.toggleModal}>
                         Login
                     </ModalHeader>
                     <ModalBody>

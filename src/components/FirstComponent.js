@@ -1,5 +1,7 @@
-import React, { Component } from "react";
-import { Button, Card, CardBody, CardText, CardTitle, CardHeader } from 'reactstrap'
+import React from "react";
+import { Button, Card, CardBody,CardTitle} from 'reactstrap'
+import ReviewCarousel from "./ReviewCarouselcomponent";
+
 
 function FirstBody() {
     return (
@@ -58,46 +60,184 @@ function SecondBody() {
 
 function MainCard() {
     return (
-        <div className="container maincard">
-            <div className="col-md-8 offset-md-2">
-                <Card>
-                    <CardBody>
-                        <CardTitle>
-                            <h4 className="text-center">Everything you need for your study abroad dream</h4>
-                        </CardTitle>
-                        <hr />
-                        <div class="row row-header">
-                            <div class="col-12 col-md-6 text-center mcarditems">
-                                <h5>Personalised Guidance</h5>
-                                <p>India’s best counsellors with you, all the way.</p>
+        <div className="notifbg">
+            <div className="container maincard">
+                <div className="col-md-12 shadow">
+                    <Card>
+                        <CardBody>
+                            <CardTitle>
+                                <h4 className="text-center">Everything you need for your study abroad dream</h4>
+                            </CardTitle>
+                            <hr />
+                            <div class="row row-header">
+                                <div class="col-12 col-md-6 text-center mcarditems">
+                                    <h5>Personalised Guidance</h5>
+                                    <p>India’s best counsellors with you, all the way.</p>
+                                </div>
+                                <div class="col-12 col-md-6 text-center mcarditems">
+                                    <h5>IELTS Coaching</h5>
+                                    <p>Learn from India’s best IELTS trainers.</p>
+                                </div>
+                                <div class="col-12 col-md-6 text-center mcarditems">
+                                    <h5>Financing Help</h5>
+                                    <p>Loans and scholarships assistance.</p>
+                                </div>
+                                <div class="col-12 col-md-6 text-center mcarditems">
+                                    <h5>Visa Assurance</h5>
+                                    <p>Our visa counsellors have a 98% success rate.</p>
+                                </div>
                             </div>
-                            <div class="col-12 col-md-6 text-center mcarditems">
-                                <h5>IELTS Coaching</h5>
-                                <p>Learn from India’s best IELTS trainers.</p>
-                            </div>
-                            <div class="col-12 col-md-6 text-center mcarditems">
-                                <h5>Financing Help</h5>
-                                <p>Loans and scholarships assistance.</p>
-                            </div>
-                            <div class="col-12 col-md-6 text-center mcarditems">
-                                <h5>Visa Assurance</h5>
-                                <p>Our visa counsellors have a 98% success rate.</p>
-                            </div>
-                        </div>
-                    </CardBody>
-                </Card>
+                        </CardBody>
+                    </Card>
+                </div>
             </div>
         </div>
     )
 }
 
 
-const First = () => {
+const Notifs = ({ news, notifs }) => {
+    const rendernews = news.map((item) => {
+        return (
+            <tr>
+                <td>
+                    {item.news}
+                </td>
+            </tr>
+        )
+    })
+    const rendernotifs = notifs.map((item) => {
+        return (
+            <tr>
+                <td>
+                    {item.notification}
+                </td>
+            </tr>
+        )
+    })
+
+    return (
+        <div className="">
+            <div className="container notifscard">
+                <div className="col-md-12 shadow">
+                    <Card className="ncard">
+                        <CardBody>
+                            <CardTitle>
+                                <h4 className="text-center">News and Notifications</h4>
+                            </CardTitle>
+                            <hr />
+                            <div className="row row-content">
+                                <div className="col-md-6 col-lg-4 offset-lg-1 nc1">
+                                    <Card className="">
+                                        <CardBody>
+                                            <CardTitle className="text-center">
+                                                <b>News</b>
+                                            </CardTitle>
+                                            <hr />
+                                            <div className="overflow-auto ncarditem">
+                                                <table class="table table-striped">
+                                                    <tbody>
+                                                        {rendernews}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </CardBody>
+                                    </Card>
+                                </div>
+                                <div className="col-md-6 col-lg-4 offset-lg-2 nc1 nc2">
+                                    <Card className="">
+                                        <CardBody>
+                                            <CardTitle className="text-center">
+                                                <b>Notifications</b>
+                                            </CardTitle>
+                                            <hr />
+                                            <div className="overflow-auto ncarditem">
+                                                <table class="table table-striped">
+                                                    <tbody>
+                                                        {rendernotifs}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </CardBody>
+                                    </Card>
+                                </div>
+                            </div>
+                        </CardBody>
+                    </Card>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+
+const FrontCard = ({ items, title }) => {
+
+    const Fcarditems = items.map((item) => {
+        return (
+            <div className="offset-md-1 col-12 col-md-5 text-left">
+                <div className="row align-items-center fcarditems">
+                    <div className="col-5 col-lg-3">
+                        <img src={item.img} className="img-float" width="100%" />
+                    </div>
+                    <div className="col-7 col-lg-9 align-middle">
+                        <h6>{item.name}</h6>
+                        <p>{item.city}</p>
+                    </div>
+                </div>
+            </div>
+        )
+    })
+
+    const DeliverCard = () => {
+        return (
+            <div className="container frontcard">
+                <div class="shadow">
+                    <Card>
+                        <CardBody>
+                            <CardTitle>
+                                <h4 className="text-center">
+                                    {title}
+                                </h4>
+                                <hr />
+                                <div className="row">
+                                    {Fcarditems}
+                                </div>
+                            </CardTitle>
+                        </CardBody>
+                    </Card>
+                </div>
+            </div>
+        )
+    }
+
+    if (title === "Our Consultants")
+        return (
+            <div className="notifbg">
+                <DeliverCard />
+            </div>
+        )
+    else
+        return (
+            <DeliverCard />
+        )
+}
+
+const First = (props) => {
+    const news = props.news;
+    const notifs = props.notifs;
+    const consultants = props.consultants
+    const mentors = props.mentors
+
     return (
         <div>
             <FirstBody />
             <SecondBody />
             <MainCard />
+            <Notifs news={news} notifs={notifs} />
+            <FrontCard items={consultants} title="Our Consultants" />
+            <FrontCard items={mentors} title="Our Mentors" />
+            <ReviewCarousel />
         </div>
     )
 }

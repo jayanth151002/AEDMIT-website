@@ -3,13 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@brainhubeu/react-carousel": "^2.0.4",
+    "@mui/material": "^5.2.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "mdb-react-ui-kit": "^2.0.0",
     "react": "^17.0.2",
+    "react-card-slide": "^1.0.13",
     "react-dom": "^17.0.2",
+    "react-fa": "^5.0.0",
+    "react-responsive-carousel": "^3.2.22",
     "react-router-dom": "4.2.2",
     "react-scripts": "4.0.3",
+    "react-slick": "^0.28.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

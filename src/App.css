@@ -1,5 +1,6 @@
 .fa{
   padding:3px 5px;
+ 
 }
 
 .ml-auto{
@@ -7,7 +8,7 @@
 }
 
 .mainfirst{
-  margin-top:30px;
+  margin-top:90px;
 }
 
 .imgf{
@@ -19,7 +20,34 @@
   padding:10px;
 }
 
+.mcarditems{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
+.fcarditems{
+  margin-top:5vh;
+  margin-bottom:5vh;
+}
+
+.frontcard{
+  padding-top:17vh;
+  padding-bottom: 17vh;
+}
+
+.navtitle{
+  padding: 10px 10px;
+}
+
+.reviewcard{
+  padding-top:17vh;
+  padding-bottom: 17vh;
+}
+
+.innerreview{
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
 
 @media only screen and (min-width: 1176px){
     .head{
@@ -36,19 +64,22 @@
     }
 
     .secondmain{
-      margin-top: 20px;
+      padding-top: 50px;
+      padding-bottom:15vh;
     }
 
     .maincard{
-      margin-top: 70px;
-      margin-bottom: 70px;
+      padding-top: 20vh;
+      padding-bottom: 20vh;
     }
+
+    .mcarditems{
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    
 }
 
-.mcarditems{
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 
 @media only screen and (min-width: 768px) and (max-width: 1176px){
   .head{
@@ -58,10 +89,26 @@
     margin-top:20px;
   }
 
+  .secondmain{
+    padding-top: 50px;
+    padding-bottom:15vh;
+  }
+
   .maincard{
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+  }
+
+  .mcarditems{
     margin-top: 40px;
     margin-bottom: 40px;
   }
+}
+
+.cmain{
+  color:black;
+  opacity: 1;
+  padding-top: 10vh;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px){
@@ -77,13 +124,37 @@
     margin-bottom:20px;
   }
 
+  .mainimg{
+    margin-top: 20px;
+  }
+
+  .secondmain{
+    padding-top: 50px;
+    padding-bottom:15vh;
+  }
+
   .maincard{
-    margin-top: 40px;
-    margin-bottom: 40px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
   }
   
   .sbodyitem{
+    margin-top:20px;
     margin-bottom:20px;
+  }
+
+  .nc2{
+    margin-top: 15px;
+  }
+
+  .notifscard{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+
+  .frontcard{
+    padding-top:10vh;
+    padding-bottom: 10vh;
   }
 
 }
@@ -93,7 +164,46 @@ h5{
 }
 
 .footer{
-  background-color: rgb(168, 164, 164);
+  background-color: rgb(135, 195, 223);
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.notifscard{
+  padding-top: 17vh;
+  padding-bottom: 17vh;
+}
+
+.ncarditem{
+  max-height: 40vh;
+}
+
+.nc1{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.notifbg{
+  background-color: rgb(228, 224, 224);
+}
+.modal-open[style] {
+  padding-right: 0px !important;
+  }
+
+
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(185, 182, 182); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgb(97, 97, 97);
+   
 }
