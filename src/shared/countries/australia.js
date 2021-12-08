@@ -1,6 +1,7 @@
 export const AUSTRALIA = 
-    {
-        country:"australia",
-        image:"./assets/images/university.jpg",
-        id:2
-    }
+    [{
+        country:"AUSTRALIA",
+        image:"/assets/images/university.jpg",
+        id:2,
+        text:"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+    }]

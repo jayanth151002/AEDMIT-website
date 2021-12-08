@@ -19,7 +19,10 @@ class Main extends Component {
 
         const CountryComp = ({ match }) => {
             return (
-                <Country country={this.state.countries.filter((item) => item.id === parseInt(match.params.id, 10))} />
+                <Country country={this.state.countries.filter((item) => {
+                    return (item[0].id === parseInt(match.params.id, 10))
+                }
+                )} />
             )
         }
 
