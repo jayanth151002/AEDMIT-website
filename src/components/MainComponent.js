@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { Switch, Route, Redirect} from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import Home from "./HomeComponent";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import Country from "./CountryComponent";
 import Counsellor from "./CounsellorComponent";
+import Aboutus from "./aboutus/aboutusComponent";
 import { COUNTRIES } from "../shared/country"
 
 
@@ -34,6 +35,7 @@ class Main extends Component {
                     <Route path="/home" component={() => <Home />} />
                     <Route exact path="/country/:notation" component={CountryComp} />
                     <Route path="/counsellor" component={() => <Counsellor />} />
+                    <Route path="/about" component={() => <Aboutus />} />
                     <Redirect to="/home" />
                 </Switch>
                 <Footer />
