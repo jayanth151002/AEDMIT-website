@@ -22,6 +22,17 @@ const CountryMain = (country) => {
         backgroundRepeat: 'no-repeat'
     }
 
+    // const CountryModal = () => {
+    //     <Modal isOpen={isModalOpen} toggle={handleModal}>
+    //         <ModalHeader close={<Button color="secondary" outline className="close" onClick={handleModal}><large>X</large></Button>} toggle={handleModal}>
+    //             Streams available
+    //         </ModalHeader>
+    //         <ModalBody>
+
+    //         </ModalBody>
+    //     </Modal>
+    // }
+
     return (
         <div className="" style={style}>
             <div className="container cmain">
@@ -33,7 +44,9 @@ const CountryMain = (country) => {
                                 <img src="/assets/images/engineering.png" width="100%" />
                             </div>
                             <div className="offset-md-2 col-md-7 col-8">
-                                <h4 onClick={handleModal}>Engineering</h4>
+                                <span onClick={handleModal}>
+                                    <h4>Engineering</h4>
+                                </span>
                             </div>
                         </div>
                     </CardBody>
@@ -62,12 +75,12 @@ const CountryMain = (country) => {
                         </div>
                     </CardBody>
                 </Card>
-                <Modal isOpen={isModalOpen} toggle={toggleModal}>
-                    <ModalHeader close={<Button color="secondary" outline className="close" onClick={toggleModal}><large>X</large></Button>} toggle={toggleModal}>
-                        Login
+                <Modal isOpen={isModalOpen} toggle={handleModal}>
+                    <ModalHeader close={<Button color="secondary" outline className="close" onClick={handleModal}><large>X</large></Button>} toggle={handleModal}>
+                        Streams available
                     </ModalHeader>
                     <ModalBody>
-                        
+
                     </ModalBody>
                 </Modal>
                 <div className="row align-items-center mt-md-5 mt-4">
