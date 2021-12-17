@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input } from 'reactstrap'
+import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
@@ -57,13 +57,27 @@ class Header extends Component {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to="/country/1">
-                                    <span className="fa fa-info fa-lg"></span>Country
-                                </NavLink>
+                                <UncontrolledDropdown nav inNavbar>
+                                    <DropdownToggle nav caret>
+                                        <span className="fa fa-globe fa-lg"></span>Countries
+                                    </DropdownToggle>
+                                    <DropdownMenu right>
+                                        <DropdownItem>
+                                            <NavLink style={{ textDecoration: "none", color: "black" }} to="/country/ger">
+                                                Germany
+                                            </NavLink>
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <NavLink style={{ textDecoration: "none", color: "black" }} to="/country/aus">
+                                                Australia
+                                            </NavLink>
+                                        </DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledDropdown>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to="/experts">
-                                    <span className="fa fa-list fa-lg"></span>Experts
+                            <NavLink className="nav-link" to="/counsellor">
+                                    <span className="fa fa-home fa-lg"></span>Counsellors
                                 </NavLink>
                             </NavItem>
                             <NavItem>

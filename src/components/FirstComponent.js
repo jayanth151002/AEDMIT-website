@@ -211,7 +211,7 @@ const FrontCard = ({ items, title }) => {
         )
     }
 
-    if (title === "Our Consultants")
+    if (title === "Our Counsellors")
         return (
             <div className="notifbg">
                 <DeliverCard />
@@ -235,7 +235,7 @@ const First = (props) => {
             <SecondBody />
             <MainCard />
             <Notifs news={news} notifs={notifs} />
-            <FrontCard items={consultants} title="Our Consultants" />
+            <FrontCard items={consultants} title="Our Counsellors" />
             <FrontCard items={mentors} title="Our Mentors" />
             <ReviewCarousel />
         </div>

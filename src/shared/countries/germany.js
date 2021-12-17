@@ -1,6 +1,7 @@
 export const GERMANY =
     [{
         country: "GERMANY",
+        notation:"ger",
         image: "/assets/images/geruniv.jpg",
         id: 1,
         text: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ",

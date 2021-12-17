@@ -1,10 +1,17 @@
-import React, { Component } from 'react'
-import { Button, Card, CardBody, CardImg, CardText, CardTitle } from 'reactstrap'
+import React, { Component, useCallback, useState } from 'react'
+import { Button, Card, CardBody, CardImg, CardText, CardTitle, Modal, ModalHeader, ModalBody } from 'reactstrap'
 import Carousel, { autoplayPlugin, slidesToShowPlugin, arrowsPlugin } from '@brainhubeu/react-carousel';
+import { Link } from 'react-router-dom'
 import ReviewCarousel from './ReviewCarouselcomponent'
 import Icon from 'react-fa'
 
 const CountryMain = (country) => {
+
+    const [isModalOpen, toggleModal] = useState(false);
+
+    const handleModal = useCallback(() => {
+        toggleModal(!isModalOpen);
+    })
 
     var style = {
         width: "100%",
@@ -26,7 +33,7 @@ const CountryMain = (country) => {
                                 <img src="/assets/images/engineering.png" width="100%" />
                             </div>
                             <div className="offset-md-2 col-md-7 col-8">
-                                <h4>Engineering</h4>
+                                <h4 onClick={handleModal}>Engineering</h4>
                             </div>
                         </div>
                     </CardBody>
@@ -55,9 +62,19 @@ const CountryMain = (country) => {
                         </div>
                     </CardBody>
                 </Card>
+                <Modal isOpen={isModalOpen} toggle={toggleModal}>
+                    <ModalHeader close={<Button color="secondary" outline className="close" onClick={toggleModal}><large>X</large></Button>} toggle={toggleModal}>
+                        Login
+                    </ModalHeader>
+                    <ModalBody>
+                        
+                    </ModalBody>
+                </Modal>
                 <div className="row align-items-center mt-md-5 mt-4">
                     <div className="col-md-3 offset-md-9 col-12  align-items-center">
-                        <Button color="warning" className="btn btn-lg" ><div style={{ color: "white" }}>Contact our Consultants</div></Button>
+                        <Button color="warning" className="btn btn-lg" >
+                            <Link to="/counsellor" style={{ textDecoration: "none" }}><div style={{ color: "white" }}>Contact our Counsellors</div></Link>
+                        </Button>
                     </div>
                 </div>
             </div>
